@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <title>روابط تك - ابتكار مستقبل التطوير العقاري</title>
+    <meta name="description" content="منصة روابط تك - حلول متكاملة للتطوير العقاري والتسويق">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <style>
+        .splash-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        .splash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: scale(1.05);
+            padding: 2rem;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .splash.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* تحسين الصور بإضافة فلاتر */
+        .splash-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            transition: all 0.8s ease;
+            overflow: hidden;
+        }
+        
+        .splash.active .splash-image {
+            transform: translate(-50%, -50%) scale(1);
+            animation: subtle-pulse 5s infinite alternate ease-in-out;
+        }
+        
+        @keyframes subtle-pulse {
+            0% { transform: translate(-50%, -50%) scale(1); filter: brightness(1); }
+            100% { transform: translate(-50%, -50%) scale(1.02); filter: brightness(1.05); }
+        }
+        
+        .splash-1 .splash-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(29,78,216,0.15) 0%, rgba(17,24,39,0.4) 100%);
+            pointer-events: none;
+        }
+        
+        .splash-2 .splash-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(8,145,178,0.15) 0%, rgba(17,24,39,0.4) 100%);
+            pointer-events: none;
+        }
+        
+        .splash-3 .splash-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, rgba(17,24,39,0.4) 100%);
+            pointer-events: none;
+        }
+        
+        .splash-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+        }
+        
+        .splash.active .splash-title {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .splash-text {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+        }
+        
+        .splash.active .splash-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .splash-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease 0.7s, transform 0.8s ease 0.7s, background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+        
+        .splash.active .splash-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .splash-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            background-color: #0d47a1;
+        }
+        
+        .splash-indicators {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 20;
+        }
+        
+        .indicator {
+            width: 40px;
+            height: 6px;
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background-color: white;
+            width: 60px;
+        }
+        
+        /* تحسين تباين الخلفية للنصوص */
+        .splash-content {
+            position: relative;
+            z-index: 20;
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.25);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            max-width: 600px;
+            width: 80%;
+            transform: scale(0.95);
+            transition: transform 0.5s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .splash.active .splash-content {
+            transform: scale(1);
+        }
+        
+        .skip-btn {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            z-index: 10;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .skip-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .splash-title {
+                font-size: 2.2rem;
+            }
+            
+            .splash-text {
+                font-size: 1.1rem;
+            }
+            
+            .splash-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <!-- Splash Screen 1 -->
+        <div class="splash splash-1 active">
+            <div class="splash-image" style="background-image: url('images/1.png');"></div>
+            <div class="splash-content">
+                <h1 class="splash-title">ابتكار مستقبل التطوير العقاري</h1>
+                <p class="splash-text">منصة روابط تك تقدم حلولًا متكاملة لقطاع التطوير العقاري باستخدام أحدث التقنيات والذكاء الاصطناعي</p>
+            </div>
+        </div>
+        
+        <!-- Splash Screen 2 -->
+        <div class="splash splash-2">
+            <div class="splash-image" style="background-image: url('images/2.png');"></div>
+            <div class="splash-content">
+                <h1 class="splash-title">خدمات متكاملة لجميع الأطراف</h1>
+                <p class="splash-text">حلول متخصصة لشركات التطوير العقاري، المسوقين، والعملاء في منصة واحدة متكاملة</p>
+            </div>
+        </div>
+        
+        <!-- Splash Screen 3 -->
+        <div class="splash splash-3">
+            <div class="splash-image" style="background-image: url('images/3.png');"></div>
+            <div class="splash-content">
+                <h1 class="splash-title">مستقبل التسويق العقاري</h1>
+                <p class="splash-text">ادخل عالم التسويق العقاري الذكي واكتشف الفرص الجديدة في عالم العقارات</p>
+                <a href="index.html" class="splash-btn">ابدأ الآن</a>
+            </div>
+        </div>
+        
+        <!-- Indicators -->
+        <div class="splash-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+        </div>
+        
+        <!-- Skip Button -->
+        <a href="index.html" class="skip-btn">تخطي <i class="fas fa-arrow-left"></i></a>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

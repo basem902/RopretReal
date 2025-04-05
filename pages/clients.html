@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <title>روابط تك - خدمات العملاء العقاريين</title>
+    <meta name="description" content="خدمات متكاملة للعملاء الباحثين عن عقارات - منصة روابط تك">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <style>
+        /* أنماط بطاقات المزايا التنافسية */
+        .advantages-container, .future-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .advantage-card, .future-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .advantage-card:hover, .future-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .advantage-icon, .future-icon {
+            background-color: var(--primary-color);
+            color: white;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .advantage-icon i, .future-icon i {
+            font-size: 28px;
+        }
+
+        .advantage-card h3, .future-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .advantage-card p, .future-card p {
+            font-size: 0.95rem;
+            color: var(--text-color-secondary);
+            line-height: 1.6;
+        }
+
+        /* تعديلات استجابية */
+        @media (max-width: 768px) {
+            .advantages-container, .future-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../images/icon.png" alt="روابط تك" class="logo">
+            <span class="logo-text">روابط تك</span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="#features">المميزات</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mode-toggle" title="تبديل الوضع المظلم">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        <section class="hero-section">
+            <h1 class="hero-title animate-fade-in">خدمات العملاء العقاريين</h1>
+            <p class="hero-description animate-fade-in">تجربة فريدة ومتكاملة للعملاء الباحثين عن عقارات، تجمع بين أحدث التقنيات وأفضل الممارسات في مجال التسويق العقاري</p>
+            <div class="hero-buttons animate-fade-in">
+                <a href="#services" class="btn btn-primary">استكشف الخدمات</a>
+                <a href="../index.html" class="btn btn-secondary">العودة للرئيسية</a>
+            </div>
+        </section>
+        
+        <section id="intro" class="section">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">مقدمة عن نظام روابط تك للعملاء</h2>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                    <p class="animate-fade-in">
+                        يقدم نظام روابط تك تجربة فريدة ومتكاملة للعملاء الباحثين عن عقارات، حيث يجمع بين أحدث التقنيات وأفضل الممارسات في مجال التسويق العقاري. صُمم النظام خصيصًا لتوفير تجربة سلسة وشاملة تتيح للعملاء استكشاف العقارات والتواصل مع المسوقين العقاريين بطريقة مبتكرة وفعالة.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="section" style="background-color: var(--card-background);">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">المميزات الرئيسية</h2>
+                
+                <div class="features">
+                    <div class="feature-card animate-fade-in">
+                        <i class="fas fa-user-check feature-icon"></i>
+                        <h3 class="feature-title">تجربة استخدام سهلة</h3>
+                        <p>واجهة مستخدم بديهية مصممة باللغة العربية تعمل على جميع الأجهزة مع تنقل سريع وسهل بين أقسام الموقع.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-fade-in">
+                        <i class="fas fa-photo-video feature-icon"></i>
+                        <h3 class="feature-title">محتوى غني ومتنوع</h3>
+                        <p>عرض العقارات بطرق مرئية جذابة مع معلومات تفصيلية وشاملة عن كل عقار وتنظيم العقارات حسب الفئات والمواقع.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-fade-in">
+                        <i class="fas fa-search feature-icon"></i>
+                        <h3 class="feature-title">أدوات بحث متقدمة</h3>
+                        <p>محرك بحث ذكي مع خيارات تصفية متعددة وخرائط تفاعلية لاستكشاف العقارات حسب الموقع وميزة المقارنة بين العقارات.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-fade-in">
+                        <i class="fas fa-comments feature-icon"></i>
+                        <h3 class="feature-title">تواصل فعال</h3>
+                        <p>نظام دردشة فوري للتواصل مع المسوقين العقاريين مع إمكانية جدولة المواعيد لمعاينة العقارات ونظام تقييم متكامل.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-fade-in">
+                        <i class="fas fa-user-cog feature-icon"></i>
+                        <h3 class="feature-title">تجربة شخصية مخصصة</h3>
+                        <p>ملف شخصي للعميل يحفظ التفضيلات والإعدادات مع توصيات ذكية للعقارات بناءً على سلوك التصفح وتنبيهات مخصصة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">الشاشات والخدمات الرئيسية</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/home-screen.jpg" alt="الصفحة الرئيسية" class="service-image">
+                        <div class="service-content">
+                            <h3>الصفحة الرئيسية</h3>
+                            <p>بوابة دخول جذابة تعرض أبرز العقارات والميزات المتاحة، مع شريط بحث سريع وأقسام مصغرة تعرض مختلف أنواع العقارات.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/property-gallery.jpg" alt="معرض العقارات" class="service-image">
+                        <div class="service-content">
+                            <h3>معرض العقارات</h3>
+                            <p>صفحة شاملة لعرض جميع العقارات المتاحة مع خيارات بحث وتصفية متقدمة، وإمكانية عرض العقارات بطريقة شبكية أو قائمة.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/property-details.jpg" alt="تفاصيل العقار" class="service-image">
+                        <div class="service-content">
+                            <h3>تفاصيل العقار</h3>
+                            <p>صفحة مفصلة تعرض جميع معلومات العقار المحدد مع معرض صور متطور، مقاطع فيديو قصيرة، وجولات افتراضية في العقار.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/short-videos.jpg" alt="منصة الفيديوهات القصيرة" class="service-image">
+                        <div class="service-content">
+                            <h3>منصة الفيديوهات القصيرة</h3>
+                            <p>منصة مبتكرة تعرض العقارات من خلال فيديوهات قصيرة وجذابة على طريقة تيك توك، مع إمكانية التنقل بين الفيديوهات بحركة سحب بسيطة.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/comparison.jpg" alt="المقارنة بين العقارات" class="service-image">
+                        <div class="service-content">
+                            <h3>المقارنة بين العقارات</h3>
+                            <p>أداة متقدمة تسمح للعملاء بمقارنة العقارات المختلفة جنبًا إلى جنب لاتخاذ قرار أفضل، مع مقارنة شاملة للمميزات والأسعار والمواقع.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/calculator.jpg" alt="حاسبة التمويل العقاري" class="service-image">
+                        <div class="service-content">
+                            <h3>حاسبة التمويل العقاري</h3>
+                            <p>أداة تساعد العملاء على حساب تكاليف التمويل العقاري والأقساط الشهرية، مع مقارنة بين خيارات التمويل المختلفة.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/user-profile.jpg" alt="الملف الشخصي للعميل" class="service-image">
+                        <div class="service-content">
+                            <h3>الملف الشخصي للعميل</h3>
+                            <p>مساحة شخصية للعميل لإدارة حسابه وتفضيلاته والعقارات المحفوظة، مع سجل للبحث والتصفح السابق والمواعيد المحجوزة.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/booking.jpg" alt="نظام الحجز والمواعيد" class="service-image">
+                        <div class="service-content">
+                            <h3>نظام الحجز والمواعيد</h3>
+                            <p>نظام متكامل لحجز مواعيد معاينة العقارات مع المسوقين العقاريين، مع تقويم تفاعلي يعرض المواعيد المتاحة.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/consultation.jpg" alt="منصة الاستشارات العقارية" class="service-image">
+                        <div class="service-content">
+                            <h3>منصة الاستشارات العقارية</h3>
+                            <p>خدمة للحصول على استشارات عقارية متخصصة من خبراء في المجال، مع إمكانية التواصل عبر الدردشة النصية أو المكالمات المرئية.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/reviews.jpg" alt="التقييمات والمراجعات" class="service-image">
+                        <div class="service-content">
+                            <h3>التقييمات والمراجعات</h3>
+                            <p>منصة لقراءة وكتابة تقييمات عن العقارات والمسوقين والخدمات المقدمة، مع نظام تقييم بالنجوم والتعليقات النصية.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/notifications.jpg" alt="مركز الإشعارات" class="service-image">
+                        <div class="service-content">
+                            <h3>مركز الإشعارات</h3>
+                            <p>نظام مركزي لإدارة جميع الإشعارات والتنبيهات المتعلقة بالعقارات والخدمات، مع إمكانية تخصيص الإعدادات حسب الأهمية والنوع.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card animate-fade-in">
+                        <img src="../images/chat.jpg" alt="الدردشة المباشرة" class="service-image">
+                        <div class="service-content">
+                            <h3>الدردشة المباشرة</h3>
+                            <p>نظام دردشة فوري يتيح للعملاء التواصل مباشرة مع المسوقين العقاريين، مع إمكانية مشاركة الصور والملفات وحفظ سجل المحادثات.</p>
+                            <a href="#" class="service-link">استكشاف <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+     
+       
+
+        <section id="advantages" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">المزايا التنافسية للنظام</h2>
+                <div class="advantages-container">
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>سرعة الأداء العالية</h3>
+                        <p>تصفح سريع للعقارات مع تحميل محسن للصور وفيديوهات عالية الجودة دون تأخير في التحميل.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>الأمان والخصوصية</h3>
+                        <p>تأمين عالي لبيانات العملاء والمعاملات العقارية مع طبقات حماية متعددة للبيانات والملفات.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>مجتمع متفاعل</h3>
+                        <p>منصة تفاعلية تتيح للعملاء التواصل مع مجتمع المستخدمين ومشاركة التجارب والتقييمات.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>التكامل الذكي</h3>
+                        <p>تكامل شامل مع الأنظمة العقارية الأخرى والخدمات المالية ومنصات التواصل الاجتماعي.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>توافق متعدد الأجهزة</h3>
+                        <p>تجربة متكاملة على جميع الأجهزة الذكية والحواسيب مع تطبيقات متخصصة للهواتف والأجهزة اللوحية.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h3>بحث ذكي متقدم</h3>
+                        <p>محرك بحث قوي يدعم الفلترة المتقدمة والبحث بالقرب من الموقع وتحديد السعر وميزات العقار.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>تعدد اللغات</h3>
+                        <p>دعم كامل للغة العربية واللغة الإنجليزية مع إمكانية إضافة لغات أخرى لتلبية احتياجات سوق عالمي.</p>
+                    </div>
+                    <div class="advantage-card animate-fade-in">
+                        <div class="advantage-icon">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <h3>مفاوضات مباشرة</h3>
+                        <p>نظام محادثات متطور يتيح للعملاء التفاوض مباشرة مع المطورين والمسوقين على الأسعار والشروط.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="section">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">اقتراحات للتطوير المستقبلي</h2>
+                <div class="future-container">
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <h3>تقنيات الواقع الافتراضي</h3>
+                        <p>تطوير تقنيات الواقع الافتراضي لتقديم جولات شاملة وغامرة للعقارات من المنزل.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>الذكاء الاصطناعي</h3>
+                        <p>تطوير مساعد افتراضي يعمل بالذكاء الاصطناعي لتقديم توصيات مخصصة وفعالة للعملاء.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>مجموعات عقارية تفاعلية</h3>
+                        <p>إنشاء مجموعات ومنتديات للعملاء المهتمين بنفس المناطق أو نوع العقارات لتبادل الخبرات.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>توسع إقليمي وعالمي</h3>
+                        <p>توسيع نطاق المنصة لتشمل أسواق عقارية متعددة في المنطقة وحول العالم.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>خدمات ما بعد البيع</h3>
+                        <p>تطوير منظومة متكاملة لخدمات ما بعد البيع تشمل الصيانة والترميم والتجديد وإدارة المرافق.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>تحليلات السوق المتقدمة</h3>
+                        <p>تطوير لوحة تحكم متقدمة للعملاء توفر تحليلات عميقة لاتجاهات السوق وتوقعات الأسعار وفرص الاستثمار.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>حلول تمويلية متكاملة</h3>
+                        <p>تطوير نظام متكامل يربط العملاء بأفضل الحلول التمويلية والرهن العقاري وتسهيل إجراءات التمويل.</p>
+                    </div>
+                    <div class="future-card animate-fade-in">
+                        <div class="future-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>منصة التأمين العقاري</h3>
+                        <p>تطوير منصة متخصصة للتأمين العقاري توفر مقارنة بين مختلف شركات التأمين وبوليصات التأمين العقاري.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-fade-in">
+                    <h2>هل أنت مستعد لتجربة عقارية متكاملة؟</h2>
+                    <p>انضم إلى آلاف العملاء على منصة روابط تك الآن واستمتع بتجربة فريدة في البحث عن عقارك المثالي</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">سجل كعميل الآن</a>
+                        <a href="#contact" class="btn btn-secondary">تحدث مع فريق الدعم</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 روابط تك | منصة التطوير والتسويق العقاري</p>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/dark-mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Dark Mode Specific Styles */
+[data-theme="dark"] {
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #f97316;
+  --text-color: #e5e7eb;
+  --background-color: #121212;
+  --card-background: #1f2937;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .user-card,
+[data-theme="dark"] .service-card {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .feature-title,
+[data-theme="dark"] .user-title,
+[data-theme="dark"] .service-title,
+[data-theme="dark"] .section-title {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .feature-icon,
+[data-theme="dark"] .user-icon {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] header {
+  background-color: #111827;
+}
+
+[data-theme="dark"] .mobile-menu {
+  background-color: var(--background-color);
+}
+
+[data-theme="dark"] .mobile-menu a {
+  color: var(--text-color);
+}
+
+/* Dark Mode Toggle Animation */
+.mode-toggle {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.mode-toggle:hover {
+  transform: rotate(15deg);
+}
+
+.mode-toggle i {
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+[data-theme="dark"] .mode-toggle .fa-sun {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-theme="dark"] .mode-toggle .fa-moon {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+[data-theme="light"] .mode-toggle .fa-sun {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+[data-theme="light"] .mode-toggle .fa-moon {
+  transform: translateY(0);
+  opacity: 1;
+}

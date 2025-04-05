@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>إنشاء أيقونة</title>
+</head>
+<body>
+    <h1>إنشاء أيقونة جديدة</h1>
+    <canvas id="iconCanvas" width="64" height="64" style="border:1px solid #d3d3d3;"></canvas>
+    <br>
+    <button onclick="downloadIcon()">تنزيل الأيقونة</button>
+
+    <script>
+        // رسم الأيقونة عند تحميل الصفحة
+        window.onload = function() {
+            drawIcon();
+        };
+
+        // رسم الأيقونة البسيطة
+        function drawIcon() {
+            var canvas = document.getElementById("iconCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            // خلفية زرقاء
+            ctx.fillStyle = "#1e3a8a";
+            ctx.fillRect(0, 0, 64, 64);
+            
+            // حرف R باللون الأبيض
+            ctx.fillStyle = "white";
+            ctx.font = "bold 40px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText("R", 32, 32);
+        }
+
+        // تنزيل الأيقونة كملف PNG
+        function downloadIcon() {
+            var canvas = document.getElementById("iconCanvas");
+            var link = document.createElement('a');
+            link.download = 'new-icon.png';
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        }
+    </script>
+</body>
+</html>
